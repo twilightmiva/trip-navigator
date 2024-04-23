@@ -1,6 +1,7 @@
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 
 function Footer(){
@@ -26,7 +27,7 @@ function Footer(){
         </div>
 <div className="text-white">
     <h1 className="text-[1.5em]">TRIPS AVAILABLE</h1>
-    <button className="bg-[linear-gradient(90deg,#000000,#737373)] text-white py-3 px-[4em] text-center rounded-md ">All-Trips</button>
+    <Link to="/trips"><button className="bg-[linear-gradient(90deg,#000000,#737373)] text-white py-3 px-[4em] text-center rounded-md ">All-Trips</button></Link>
 </div>
 
     </div>

@@ -18,7 +18,7 @@ function Router() {
           }
         />
         <Route
-          path="/Login"
+          path="/login"
           element={
             <Layout>
               <Login />
@@ -27,7 +27,7 @@ function Router() {
         />
 
         <Route
-          path="/Signup"
+          path="/signup"
           element={
             <Layout>
               <Signup />
@@ -45,7 +45,7 @@ function Router() {
         />
 
         <Route
-          path="/Booknow"
+          path="/booknow"
           element={
             <Layout>
               <Booknow />
