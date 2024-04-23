@@ -17,14 +17,14 @@ function Footer(){
 
             </div>
         </div>
-        <div className="mb-[2em]">
-            <h1 className="text-[1.5em] font-medium">CONTACT-US</h1>
-            <h1 className="text-[1.2em] font-semibold">Enquiries:</h1>
-            <p className="text-[1.5em] font-medium">mercy@gmail.com</p>
-            <h1 className="text-[1.2em] font-semibold">Bookings:</h1>
-            <p className="text-[1.5em] font-medium">larry@gmail.com</p>
+        <div className="mb-[2em] text-white">
+            <h1 className="text-[1.5em]">CONTACT-US</h1>
+            <h1 className="text-[1.2em]">Enquiries:</h1>
+            <p className="">mercy@gmail.com</p>
+            <h1 className="text-[1.2em]">Bookings:</h1>
+            <p className="">larry@gmail.com</p>
         </div>
-<div className="mb-[6em]">
+<div className="mb-[6em] text-white">
     <h1 className="font-medium text-[1.5em]">TRIPS AVAILABLE</h1>
     <button className="bg-[linear-gradient(90deg,#000000,#737373)] text-white py-3 px-[4em] text-center rounded-md ">All-Trips</button>
 </div>
