@@ -10,4 +10,4 @@ function Latesttrip(){
         </div>
     )
 }
-export default Latesttrip</div>
+export default Latesttrip

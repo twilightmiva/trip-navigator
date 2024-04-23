@@ -1,12 +1,11 @@
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
-import { Link } from "react-router-dom";
 
 
 function Footer(){
     return(
-<footer className="bg-[linear-gradient(90deg,#000000,#737373)] ">
+<footer className="bg-[linear-gradient(90deg,#000000,#737373)] bg-no-repeat bg-cover bg-center">
     <div className="flex justify-between items-center">
         <div>
             <img className="h-[20vh]" src="src/assets/images/Adora-removebg-preview.png "/>
@@ -18,16 +17,16 @@ function Footer(){
 
             </div>
         </div>
-        <div className=" text-white">
-            <h1 className="text-[1.5em]">CONTACT-US</h1>
+        <div className="mb-[2em]">
+            <h1 className="text-[1.5em] font-medium">CONTACT-US</h1>
             <h1 className="text-[1.2em] font-semibold">Enquiries:</h1>
-            <p>mercy@gmail.com</p>
+            <p className="text-[1.5em] font-medium">mercy@gmail.com</p>
             <h1 className="text-[1.2em] font-semibold">Bookings:</h1>
-            <p>larry@gmail.com</p>
+            <p className="text-[1.5em] font-medium">larry@gmail.com</p>
         </div>
-<div className="text-white">
-    <h1 className="text-[1.5em]">TRIPS AVAILABLE</h1>
-    <Link to="/trips"><button className="bg-[linear-gradient(90deg,#000000,#737373)] text-white py-3 px-[4em] text-center rounded-md ">All-Trips</button></Link>
+<div className="mb-[6em]">
+    <h1 className="font-medium text-[1.5em]">TRIPS AVAILABLE</h1>
+    <button className="bg-[linear-gradient(90deg,#000000,#737373)] text-white py-3 px-[4em] text-center rounded-md ">All-Trips</button>
 </div>
 
     </div>
