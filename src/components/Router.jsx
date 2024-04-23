@@ -36,7 +36,7 @@ function Router() {
         />
 
         <Route
-          path="/Trip"
+          path="/trips"
           element={
             <Layout>
               <Trip />

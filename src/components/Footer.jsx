@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 function Footer(){
     return(
-<footer className="bg-[url('src/assets/images/footer.jpg')] bg-no-repeat bg-cover bg-center">
+<footer className="bg-[linear-gradient(90deg,#000000,#737373)] ">
     <div className="flex justify-between items-center">
         <div>
             <img className="h-[20vh]" src="src/assets/images/Adora-removebg-preview.png "/>
@@ -17,15 +17,15 @@ function Footer(){
 
             </div>
         </div>
-        <div className="mb-[2em]">
-            <h1 className="text-[1.5em] font-medium">CONTACT-US</h1>
+        <div className=" text-white">
+            <h1 className="text-[1.5em]">CONTACT-US</h1>
             <h1 className="text-[1.2em] font-semibold">Enquiries:</h1>
-            <p className="text-[1.5em] font-medium">mercy@gmail.com</p>
+            <p>mercy@gmail.com</p>
             <h1 className="text-[1.2em] font-semibold">Bookings:</h1>
-            <p className="text-[1.5em] font-medium">larry@gmail.com</p>
+            <p>larry@gmail.com</p>
         </div>
-<div className="">
-    <h1 className="font-medium text-[1.5em]">TRIPS AVAILABLE</h1>
+<div className="text-white">
+    <h1 className="text-[1.5em]">TRIPS AVAILABLE</h1>
     <button className="bg-[linear-gradient(90deg,#000000,#737373)] text-white py-3 px-[4em] text-center rounded-md ">All-Trips</button>
 </div>
 

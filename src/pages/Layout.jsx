@@ -1,10 +1,13 @@
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-function Layout() {
+function Layout({children}) {
   return (
     <div>
       <Nav></Nav>
-      <main className="min-h-[100vh]"></main>
+      <main className="min-h-[100vh]">
+
+        {children}
+      </main>
       <Footer></Footer>
     </div>
   );
