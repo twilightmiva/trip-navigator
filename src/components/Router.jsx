@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "../../pages/Layout";
-import Login from "../../pages/Login";
-import Signup from "../../pages/Signup";
-import Booknow from "../../pages/Booknow";
-import Home from "../../pages/Home";
-import Trip from "../../pages/Trip";
+import Layout from "../pages/Layout";
+import Login from "../pages/Login";
+import Signup from "../pages/Signup";
+import Booknow from "../pages/Booknow";
+import Home from "../pages/Home";
+import Trip from "../pages/Trip";
 function Router() {
   return (
     <BrowserRouter>
@@ -17,7 +17,7 @@ function Router() {
             </Layout>
           }
         />
-           <Route
+        <Route
           path="/Login"
           element={
             <Layout>
@@ -26,7 +26,7 @@ function Router() {
           }
         />
 
-<Route
+        <Route
           path="/Signup"
           element={
             <Layout>
@@ -35,7 +35,7 @@ function Router() {
           }
         />
 
-<Route
+        <Route
           path="/Trip"
           element={
             <Layout>
@@ -44,7 +44,7 @@ function Router() {
           }
         />
 
-<Route
+        <Route
           path="/Booknow"
           element={
             <Layout>
@@ -52,8 +52,6 @@ function Router() {
             </Layout>
           }
         />
-
-
       </Routes>
     </BrowserRouter>
   );
