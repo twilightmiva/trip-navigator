@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 function Footer(){
     return(
-<footer className="bg-[url('src/assets/images/navv.jpg')] bg-no-repeat bg-cover bg-center">
+<footer className="bg-[linear-gradient(90deg,#000000,#737373)] bg-no-repeat bg-cover bg-center">
     <div className="flex justify-between items-center">
         <div>
             <img className="h-[20vh]" src="src/assets/images/Adora-removebg-preview.png "/>

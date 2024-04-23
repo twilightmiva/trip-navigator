@@ -1,12 +1,15 @@
-import Nav from "../components.jsx/Nav"
-import Footer from "../components.jsx/Footer"
-function Layout(){
-    return(
-        <div>
-            <Nav></Nav>
-            <main className="min-h-[100vh]"></main>
-            <Footer></Footer>
-        </div>
-    )
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+function Layout({children}) {
+  return (
+    <div>
+      <Nav></Nav>
+      <main className="min-h-[100vh]">
+
+        {children}
+      </main>
+      <Footer></Footer>
+    </div>
+  );
 }
-export default Layout
+export default Layout;

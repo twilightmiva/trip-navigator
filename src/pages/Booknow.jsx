@@ -1,4 +1,7 @@
 function Booknow(){
-    return
+    return(
+        <div>
+        </div>
+    )
 }
 export default Booknow
