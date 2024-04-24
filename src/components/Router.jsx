@@ -7,6 +7,7 @@ import Home from "../pages/Home";
 import Trip from "../pages/Trip";
 import Logins from "../pages/Logins";
 import Register from "../pages/Register";
+import Singletrip from "./SingletripData";
 function Router() {
   return (
     <BrowserRouter>
@@ -19,8 +20,8 @@ function Router() {
             </Layout>
           }
         />
-      
-      <Route
+
+        <Route
           path="/Login"
           element={
             <Layout>
@@ -28,7 +29,7 @@ function Router() {
             </Layout>
           }
         />
- <Route
+        <Route
           path="/Logins"
           element={
             <Layout>
@@ -36,7 +37,6 @@ function Router() {
             </Layout>
           }
         />
-        
 
         <Route
           path="/signup"
@@ -65,11 +65,20 @@ function Router() {
           }
         />
 
-<Route
+        <Route
           path="/register"
           element={
             <Layout>
               <Register />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/trips/:id"
+          element={
+            <Layout>
+              <Singletrip />
             </Layout>
           }
         />
