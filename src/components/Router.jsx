@@ -5,6 +5,8 @@ import Signup from "../pages/Signup";
 import Booknow from "../pages/Booknow";
 import Home from "../pages/Home";
 import Trip from "../pages/Trip";
+import Logins from "../pages/Logins";
+import Register from "../pages/Register";
 function Router() {
   return (
     <BrowserRouter>
@@ -17,14 +19,24 @@ function Router() {
             </Layout>
           }
         />
-        <Route
-          path="/login"
+      
+      <Route
+          path="/Login"
           element={
             <Layout>
               <Login />
             </Layout>
           }
         />
+ <Route
+          path="/Logins"
+          element={
+            <Layout>
+              <Logins />
+            </Layout>
+          }
+        />
+        
 
         <Route
           path="/signup"
@@ -49,6 +61,15 @@ function Router() {
           element={
             <Layout>
               <Booknow />
+            </Layout>
+          }
+        />
+
+<Route
+          path="/register"
+          element={
+            <Layout>
+              <Register />
             </Layout>
           }
         />
