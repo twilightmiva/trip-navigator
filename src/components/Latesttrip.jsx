@@ -7,6 +7,7 @@ function Latesttrip(){
 <Latest img={} title=""/>
 <Latest img={} title=""/>
 <Latest  img={} title=""/>
+{/* <h1>hey</h1> */}
         </div>
     )
 }
