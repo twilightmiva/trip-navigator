@@ -2,7 +2,7 @@ function Hero(){
     return(
         <div className="h-[60vh]">
             <div>
-                <img src="src/assets/images/nav.jpg" className="w-[100vw] h-[80vh] absolute top-1 z-[-1]" />
+                <img src="src/assets/images/namanga.jpg" className="absolute w-[100%] z-[-1]" />
             </div>
         </div>
     )
