@@ -7,6 +7,7 @@ import Home from "../pages/Home";
 import Trip from "../pages/Trip";
 import Logins from "../pages/Logins";
 import Register from "../pages/Register";
+import Addtrip from "../pages/Addtrip";
 function Router() {
   return (
     <BrowserRouter>
@@ -70,6 +71,22 @@ function Router() {
           element={
             <Layout>
               <Register />
+            </Layout>
+          }
+        />
+        <Route
+          path="/addtrip"
+          element={
+            <Layout>
+              <Addtrip />
+            </Layout>
+          }
+        />
+         <Route
+          path="/addtrip"
+          element={
+            <Layout>
+              <Addtrip />
             </Layout>
           }
         />
