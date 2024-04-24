@@ -101,6 +101,7 @@ function Sign() {
                 className=" border-2 py-2 px-[3em]  m-[1em]    "
                 name="confirmPassword"
                 onChange={handleChange}
+                
               />
             </div>
 
@@ -110,6 +111,7 @@ function Sign() {
             className="border-2 py-2 px-[3em] border-#45C9A1  cursor-pointer bg-[linear-gradient(90deg,#000000,#737373)] text-white w-[92%] "
             onClick={handleRegistration}
           >
+            {/* <h1>hey</h1> */}
             Sign up
           </button>
           <h1 className="p-[2em]">
