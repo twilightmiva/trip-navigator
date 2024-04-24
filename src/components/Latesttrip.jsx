@@ -5,6 +5,7 @@ import samburu from "../assets/images/samburu.avif"
 function Latesttrip(){
     return(
         <div>
+
             <h1 className="text-center mt-3 text-[2em]">LATEST TRIPS</h1>
             <div className="flex justify-between">
 
