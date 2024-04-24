@@ -4,7 +4,7 @@ function Latest({img,title}){
 return(
     <div className="">
         
-        <div className="flex flex-col border bg-white">
+        <div className="flex flex-col border bg-white flex-wrap">
     <div>
         <img src={img} className="w-[400px] h-[200px]"/>
 
