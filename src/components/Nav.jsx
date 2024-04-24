@@ -10,6 +10,7 @@ function Nav() {
               className="h-[20vh]"
               src="src/assets/images/Adora-removebg-preview.png "
             />
+            {/* <h1>hhhhhh</h1> */}
           </div>
         </Link>
         <div>
