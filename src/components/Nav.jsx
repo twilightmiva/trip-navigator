@@ -7,6 +7,7 @@ function Nav(){
         <Link to="/"><div><img className="h-[20vh]" src="src/assets/images/Adora-removebg-preview.png "/>
 </div></Link>
         <div>
+            {/* <h1>mercy</h1> */}
             <ul className="flex flex-wrap justify-center items-center gap-7">
                 <Link to="/signup"><li className="bg-[linear-gradient(90deg,#000000,#737373)] text-white py-3 px-5 text-center rounded-md">Sign-Up</li></Link>
                 <Link to="/logins"><li className="bg-[linear-gradient(90deg,#000000,#737373)] text-white py-3 px-5 text-center rounded-md ">Log-In</li></Link>
