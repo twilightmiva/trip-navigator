@@ -1,8 +1,9 @@
-function Signup(){
-    return(
-        <div>
-        <h1>hey</h1>
-        </div>
-    )
-} 
-export default Signup
+import Sign from "../components/Sign";
+function Signup() {
+  return (
+    <div>
+      <Sign />
+    </div>
+  );
+}
+export default Signup;
