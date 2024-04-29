@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+function Latest({img,title,place}){
+    const navigate = useNavigate();
 
-function Latest({img,title}){
+function handleSingleTrip(){
+    navigate(`/trips/${title}`, {state:{img,title,place}})
+}
 return(
     <div className="">
         
@@ -12,7 +17,7 @@ return(
     <div className="pl-[6eexm] flex flex-col justify-center items-center">
 
     <p className="text-center" >{title}</p>
-    <Link to="/trips"><button className=" bg-[linear-gradient(90deg,#000000,#737373)] text-white py-2 px-[4em]">Details</button></Link>
+    <button className=" bg-[linear-gradient(90deg,#000000,#737373)] text-white py-2 px-[4em]" onClick={handleSingleTrip}>Details</button>
     </div>
     </div>
     </div>
