@@ -1,5 +1,4 @@
 import Hero from "../components/Hero";
-import Latest from "../components/Latest";
 import Latesttrip from "../components/Latesttrip";
 function Home(){
     return(
