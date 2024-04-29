@@ -1,58 +1,50 @@
-import { useNavigate } from "react-router-dom";
+
+
+
+
+
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 import { FaRegEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import { auth } from "../firebase";
+import { useNavigate } from "react-router-dom";
 
 function Sign() {
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const [userRegister, setRegister] = useState([]);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     password: "",
-    confirmPassword: "",
-    tripOrganizer: false,
+    confirmPassword: ""
   });
-
   const navigate = useNavigate();
-
-  function changeThePassword() {
-    setShowPassword((prev) => !prev);
-  }
 
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
   function handleRegistration(e) {
-
-    console.log(formData)
     e.preventDefault();
     setErrorMessage("");
 
-    if (
-      formData.fullName === "" ||
-      formData.email === "" ||
-      formData.password === "" ||
-      formData.confirmPassword === ""
-    ) {
+    const { fullName, email, password, confirmPassword } = formData;
+
+    if (!fullName || !email || !password || !confirmPassword) {
       setErrorMessage("Kindly fill all the fields");
       return;
     }
 
-    if (formData.password !== formData.confirmPassword) {
+    if (password !== confirmPassword) {
       setErrorMessage("The passwords do not match");
       return;
     }
 
-    createUserWithEmailAndPassword(auth, formData.email, formData.password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         setErrorMessage("");
-
         console.log("User registered successfully:", user);
         navigate("/logins");
       })
@@ -64,17 +56,20 @@ function Sign() {
 
   function handleCheckbox(e) {
     if (e.target.checked) {
-      setFormData({ ...formData, tripOrganizer: true });
-    } else {
-      setFormData({ ...formData, tripOrganizer: false });
-    }
+        setFormData({ ...formData, tripOrganizer: true });
+      } else {
+        setFormData({ ...formData, tripOrganizer: false });
+      }
+
+  function changeThePassword() {
+    setShowPassword((prev) => !prev);
   }
 
   return (
     <div>
       <div className="">
         <div className="flex flex-col justify-center items-center border-gray shadow-lg  border-2 h-[100vh] ">
-          <div className="flex flex-col justify-center items-center border-gray rounded-[30px] shadow-lg  border-2 p-[5em] bg-[linear-gradient(90deg,#000000,#737373)]">
+          <div className="flex flex-col justify-center items-center border-gray shadow-lg  border-2 p-[5em] bg-[linear-gradient(90deg,#000000,#737373)]">
             <input
               type="text"
               placeholder="Your name"
@@ -118,18 +113,22 @@ function Sign() {
             </div>
 
             <p className="text-red-400">{errorMessage}</p>
-            {/* <p className="text-green-400">{userRegister}</p> */}
+
             <div className="flex py-5 justify-center gap-2">
-              <input id="organizer" type="checkbox" onChange={e=>handleCheckbox(e)} />
+              <input
+                id="organizer"
+                type="checkbox"
+                onChange={handleCheckbox}
+              />
               <label htmlFor="organizer" className="text-white text-[1em]">
                 Sign-up as a Trip Organizer
               </label>
             </div>
+
             <button
               className="border-2 py-2 px-[3em] border-#45C9A1  cursor-pointer bg-[linear-gradient(90deg,#000000,#737373)] text-white w-[92%] "
               onClick={handleRegistration}
             >
-              {/* <h1>hey</h1> */}
               Sign up
             </button>
           </div>
@@ -144,4 +143,5 @@ function Sign() {
     </div>
   );
 }
-export default Sign;
+}
+export default Sign

@@ -5,7 +5,7 @@
 import { LuEye } from "react-icons/lu";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth"
 import { auth } from "../firebase";
 
 function Register() {
