@@ -1,21 +1,4 @@
-// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-// const auth = getAuth();
-// signInWithEmailAndPassword(auth, email, password)
-//   .then((userCredential) => {
-//     // Signed in 
-//     const user = userCredential.user;
-//     // ...
-//   })
-//   .catch((error) => {
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//   });
-
-// function Register(){
-//     return
-// }
-// export default Register
 
 
 
@@ -87,7 +70,7 @@ function Register() {
   }
   return (
     <div className=" h-[100vh] flex justify-center items-center">
-      <div className="flex bg-white box-boder shadow-lg p-[50px] rounded-xl">
+      <div className="flex flex-col justify-center items-center border-gray shadow-lg  border-2 p-[5em] bg-[linear-gradient(90deg,#000000,#737373)]">
        <div className="bg-white w-[100%] h-[100]">
           <img src="src/assets/images/signup.jpg" className="hidden sm:flex"/>
         </div>
@@ -96,7 +79,7 @@ function Register() {
             <input
               type="text"
               placeholder="Full Name"
-              className=" py-5 pr-[20em] px-2 bg-transparent outline-none flex-1 "
+              className="border-2 py-2 px-[3em]  m-[1em]  "
               name="fullName"
               onChange={handleChange}
             />
@@ -105,7 +88,7 @@ function Register() {
             <input
               type="text"
               placeholder="Email"
-              className=" py-5 pr-[20em] px-2 bg-transparent outline-none flex-1 "
+              className=" border-2 py-2 px-[3em]  m-[1em] "
               name="email"
              onChange={handleChange}
             />
@@ -115,7 +98,7 @@ function Register() {
             <input
               type="number"
               placeholder="Phone Number"
-              className=" py-5 pr-[20em] px-2 bg-transparent outline-none flex-1 "
+              className="border-2 py-2 px-[3em]  m-[1em] "
               name="phoneNumber"
              onChange={handleChange}
             />
@@ -125,7 +108,7 @@ function Register() {
             <input
               type={showPassword ? "password" : "text"}
               placeholder="password"
-              className=" py-5 pr-[20em] px-2 bg-transparent outline-none flex-1 "
+              className="border-2 py-2 px-[3em]  m-[1em]  "
               name="password"
               onChange={handleChange}
             />
@@ -141,7 +124,7 @@ function Register() {
             <input
               type={showPassword ? "password" : "text"}
               placeholder="Confirm Passsword"
-             className=" py-5 pr-[20em] px-2 bg-transparent outline-none flex-1 "
+             className="border-2 py-2 px-[3em]  m-[1em]  "
               name="confirmPassword"
               onChange={handleChange}
             />
@@ -153,10 +136,10 @@ function Register() {
               <label
                 onClick={() => handleRegisterSelection("designer")}
                htmlFor="designer"
-                className=" flex gap-4 justify-center items-center py-[2em] cursor-pointer "
+                className=" "
                 style={{
                   backgroundColor:
-                    registerSelection === "designer" ? "#0D47A1" : "#4c87e0",
+                    registerSelection === "client" ? "" : "",
                 }}
               >
                 <input
@@ -180,7 +163,7 @@ function Register() {
                 className=" flex gap-4 justify-center items-center py-[2em] cursor-pointer"
                 style={{
                   backgroundColor:
-                    registerSelection === "client" ? "#0D47A1" : "#4c87e0",
+                    registerSelection === "client" ? "red" : "",
                }}
               >
                <input

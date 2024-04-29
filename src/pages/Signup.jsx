@@ -1,5 +1,5 @@
 import Sign from "../components/Sign";
-function Signup() {
+ function Signup() {
   return (
     <div>
       <Sign />
