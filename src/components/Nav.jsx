@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function Nav(){
     return(
-<nav className=" bg-[linear-gradient(90deg,#000000,#737373)] h-[20vh] ">
+<nav className="rounded-tl-[40px] bg-[linear-gradient(90deg,#000000,#737373)]">
     <div className="flex flex-wrap justify-between items-center pt-[-4em]">
         <Link to="/"><div><img className="h-[20vh]" src="src/assets/images/Adora-removebg-preview.png "/>
 </div></Link>

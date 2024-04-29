@@ -5,7 +5,10 @@ import namanga3 from "../assets/images/namangadayhoike.jpg";
 import naboisho from "../assets/images/narok.avif";
 import naboisho1 from "../assets/images/narok1.avif";
 import naboisho2 from "../assets/images/naboisho.avif";
+import nakuru2 from "../assets/images/elementaita.jpeg"
 import samburu from "../assets/images/samburu.avif";
+import samburu1 from "../assets/images/navb.avif"
+import samburu2 from "../assets/images/go.jpeg"
 import nakuru from "../assets/images/nakuru.avif";
 import nakuru1 from "../assets/images/nakuru1.avif";
 
@@ -39,8 +42,8 @@ function Alltrips() {
         </div>
         <div className="flex justify-between">
           <Alltrip img={samburu} />
-          <Alltrip />
-          <Alltrip />
+          <Alltrip img={samburu1}/>
+          <Alltrip img={samburu2}/>
         </div>
         <div className="flex justify-between">
           <Alltrip
@@ -50,7 +53,7 @@ function Alltrips() {
 Nairobi"
           />
           <Alltrip img={nakuru1} />
-          <Alltrip />
+          <Alltrip  img={nakuru2}/>
         </div>
       </div>
     </div>
