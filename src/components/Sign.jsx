@@ -1,8 +1,4 @@
 
-
-
-
-
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 import { FaRegEye, FaEyeSlash } from "react-icons/fa";
@@ -54,6 +50,7 @@ function Sign() {
       });
   }
 
+
   function handleCheckbox(e) {
     if (e.target.checked) {
         setFormData({ ...formData, tripOrganizer: true });
@@ -66,6 +63,7 @@ function Sign() {
   }
 
   return (
+
     <div>
       <div className="">
         <div className="flex flex-col justify-center items-center border-gray shadow-lg  border-2 h-[100vh] ">
@@ -143,5 +141,6 @@ function Sign() {
     </div>
   );
 }
+
 }
 export default Sign
