@@ -92,6 +92,7 @@ function Register() {
               name="email"
              onChange={handleChange}
             />
+            {/* <p>trips</p> */}
           </div>
 
           <div className="border-2  rounded-lg w-full shadow-lg">
