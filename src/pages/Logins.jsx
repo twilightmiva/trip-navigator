@@ -96,6 +96,7 @@ function Logins() {
           >
             Log-In
           </button>
+          {/* <h1>hey</h1> */}
           </div>
           <h1 className="p-[2em]">
             Already have an account?
