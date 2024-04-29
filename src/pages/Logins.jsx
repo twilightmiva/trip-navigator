@@ -104,6 +104,7 @@ function Logins() {
               <span className="underline cursor-pointer">Login</span>
             </Link>
           </h1>
+          <h1>hello</h1>
         </div>
       </div>
     </div>
