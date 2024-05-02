@@ -13,7 +13,7 @@ function Logins() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
   });
   const navigate = useNavigate();
 
@@ -21,7 +21,6 @@ function Logins() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
-  
   function handleRegistration(e) {
     e.preventDefault();
 
@@ -50,6 +49,7 @@ function Logins() {
       console.error("Registration error:", error);
     });
 
+ 
   return (
     <div>
       <div className="">
@@ -90,13 +90,13 @@ function Logins() {
               />
             </div>
             <p className="text-red-400">{errorMessage}</p>
-          <button
-            className="border-2 py-2 px-[3em] border-#45C9A1  cursor-pointer bg-[linear-gradient(90deg,#000000,#737373)] text-white w-[92%] "
-            onClick={handleRegistration}
-          >
-            Log-In
-          </button>
-          {/* <h1>hey</h1> */}
+            <button
+              className="border-2 py-2 px-[3em] border-#45C9A1  cursor-pointer bg-[linear-gradient(90deg,#000000,#737373)] text-white w-[92%] "
+              onClick={handleRegistration}
+            >
+              Log-In
+            </button>
+            {/* <h1>hey</h1> */}
           </div>
           <h1 className="p-[2em]">
             Already have an account?

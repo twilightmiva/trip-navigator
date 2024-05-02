@@ -1,6 +1,8 @@
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function Footer(){
@@ -27,12 +29,11 @@ function Footer(){
             <p className="">larry@gmail.com</p>
         </div>
 <div className="mb-[6em] pt-10 text-white">
-    <h1 className="font-medium text-[1.5em]">TRIPS AVAILABLE</h1>
-    <button className="bg-[linear-gradient(90deg,#000000,#737373)] text-white py-3 px-[4em] text-center rounded-md ">All-Trips</button>
+<Link to="/trips"><li className="bg-[linear-gradient(90deg,#000000,#737373)] text-white py-3 px-5 text-center rounded-md ">All-Trips</li></Link>
 </div>
 
     </div>
 </footer>
     )
 }
-export default Footer
+export default Footer;

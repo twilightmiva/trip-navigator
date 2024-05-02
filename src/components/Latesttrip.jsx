@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Latest from "./Latest";
 import namanga from "../assets/images/namanga.jpg";
 import naivasha from "../assets/images/offroadnaivasha.avif";
@@ -17,15 +16,6 @@ function Latesttrip() {
           <h1 className="text-[2em] flex justify-center underline">
             Get the experience of a lifetime
           </h1>
-=======
-import Latest from "./Latest"
-import namanga from "../assets/images/namanga.jpg"
-import naivasha from "../assets/images/offroadnaivasha.avif"
-import samburu from "../assets/images/samburu.avif"
-function Latesttrip(){
-    return(
-        <div className="mt-[270px]">
->>>>>>> 41aeb05c3fb401c00779219464bef4956effb16d
 
           <img
             src="src/assets/images/Safari-Link-Fleet-10-1000x246.png"
@@ -41,17 +31,10 @@ function Latesttrip(){
         </div>
       </div>
       <div className="container mx-[auto] flex justify-evenly ">
-        <div className="border shadow-lg bg-[linear-gradient(90deg,#000000,#737373)] p-[2em]">
-          <h1>hey</h1>
-        </div>
-        <div className="border shadow-lg bg-[linear-gradient(90deg,#000000,#737373)] p-[2em]">
-          {" "}
-          <h1>hey</h1>
-        </div>
-        <div className="border shadow-lg bg-[linear-gradient(90deg,#000000,#737373)] p-[2em]">
-          {" "}
-          <h1>hey</h1>
-        </div>
+        
+        
+        
+        
       </div>
     </div>
   );
