@@ -7,7 +7,7 @@ function handleSingleTrip(){
     navigate(`/trips/${title}`, {state:{img,title,place}})
 }
 return(
-    <div className="">
+    <div className="shadow-2xl my-10">
         
         <div className="flex flex-col border bg-white flex-wrap">
     <div>
