@@ -1,19 +1,22 @@
 import { Link } from "react-router-dom";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
 import { useState } from "react";
 import { FaRegEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { auth } from "../firebase";
-
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
 function Logins() {
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
+
     confirmPassword: "",
+
   });
   const navigate = useNavigate();
 
@@ -21,21 +24,51 @@ function Logins() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
+
+  async function getUserInfo() {}
+
   function handleRegistration(e) {
     e.preventDefault();
 
-    if (
-      formData.email === "" ||
-      formData.password === "" ||
-      formData.confirmPassword === ""
-    ) {
+    if (formData.email === "" || formData.password === "") {
       setErrorMessage("Kindly fill all the Fields");
+    } else {
+      const auth = getAuth();
+      signInWithEmailAndPassword(auth, formData.email, formData.password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+
+          if (user) {
+            (async () => {
+              const q = query(
+                collection(db, "userInfo"),
+                where("email", "==", formData.email)
+              );
+
+              const querySnapshot = await getDocs(q);
+              querySnapshot.forEach((doc) => {
+                console.log(doc.id, " => ", doc.data());
+                const {password, confirmPassword, ...user} = doc.data()
+                localStorage.setItem("user",JSON.stringify(user))
+
+                console.log(user)
+              });
+            })();
+          }
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+        });
     }
+    navigate("/")
   }
 
   function changeThePassword() {
     setShowPassword((prev) => !prev);
   }
+
 
   createUserWithEmailAndPassword(auth, formData.email, formData.password)
     .then((userCredential) => {
@@ -50,6 +83,7 @@ function Logins() {
     });
 
  
+
   return (
     <div>
       <div className="">
@@ -80,15 +114,7 @@ function Logins() {
                 {showPassword ? <FaEyeSlash /> : <FaRegEye />}
               </div>
             </div>
-            <div className="">
-              <input
-                type={showPassword ? "text" : "password"}
-                placeholder="Confirm Passsword"
-                className=" border-2 py-2 px-[3em]  m-[1em]    "
-                name="confirmPassword"
-                onChange={handleChange}
-              />
-            </div>
+
             <p className="text-red-400">{errorMessage}</p>
             <button
               className="border-2 py-2 px-[3em] border-#45C9A1  cursor-pointer bg-[linear-gradient(90deg,#000000,#737373)] text-white w-[92%] "
@@ -96,12 +122,12 @@ function Logins() {
             >
               Log-In
             </button>
-            {/* <h1>hey</h1> */}
+
           </div>
           <h1 className="p-[2em]">
-            Already have an account?
-            <Link to="/Logins">
-              <span className="underline cursor-pointer">Login</span>
+            Don't have an Account?
+            <Link to="/signup">
+              <span className="underline cursor-pointer">Sign-Up</span>
             </Link>
           </h1>
           <h1>hello</h1>

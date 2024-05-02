@@ -4,8 +4,12 @@ import { Link } from "react-router-dom";
 import { FaRegEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import { auth } from "../firebase";
+
 import { useNavigate } from "react-router-dom";
 
+
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../firebase";
 function Sign() {
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -21,7 +25,17 @@ function Sign() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
+
   function handleRegistration(e) {
+
+  async function handleSaveUser() {
+    const docRef = await addDoc(collection(db, "userInfo"), formData);
+    console.log("Document written with ID: ", docRef.id);
+  }
+
+  function handleRegistration(e) {
+    console.log(formData);
+
     e.preventDefault();
     setErrorMessage("");
 
@@ -42,6 +56,7 @@ function Sign() {
         const user = userCredential.user;
         setErrorMessage("");
         console.log("User registered successfully:", user);
+        handleSaveUser();
         navigate("/logins");
       })
       .catch((error) => {
@@ -49,7 +64,6 @@ function Sign() {
         console.error("Registration error:", error);
       });
   }
-
 
   function handleCheckbox(e) {
     if (e.target.checked) {
@@ -63,7 +77,6 @@ function Sign() {
   }
 
   return (
-
     <div>
       <div className="">
         <div className="flex flex-col justify-center items-center border-gray shadow-lg  border-2 h-[100vh] ">
@@ -116,7 +129,9 @@ function Sign() {
               <input
                 id="organizer"
                 type="checkbox"
-                onChange={handleCheckbox}
+
+                onChange={(e) => handleCheckbox(e)}
+
               />
               <label htmlFor="organizer" className="text-white text-[1em]">
                 Sign-up as a Trip Organizer
@@ -141,6 +156,5 @@ function Sign() {
     </div>
   );
 }
+export default Sign;
 
-}
-export default Sign

@@ -1,3 +1,4 @@
+
 // import React, { useState, useEffect } from "react";
 // import axios from "axios";
 // import { useParams } from "react-router-dom";
@@ -116,7 +117,16 @@
 
 // export default Booknow;
 
-function Booknow (){
-  return
+
+
+import Book from "../components/Book"
+
+function Booknow(){
+    return(
+        <>
+            <Book/>
+        </>
+    )
+
 }
 export default Booknow;
