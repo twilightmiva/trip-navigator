@@ -1,13 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=BAArk_3uDewn0_Iww3QdPMInbf-LIuy16NbSiDL9_s5PTLsuTj4WQF4TLhLgI4heBGzbs0cH0bnVBNMgV4&components=hosted-buttons&disable-funding=venmo&currency=USD"
+      crossorigin="anonymous"
+      async
+    ></script>
     <title>Vite + React</title>
   </head>
   <body>
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        paypal
+          .HostedButtons({
+            hostedButtonId: "EHCCMNK4LLQAJ",
+          })
+          .render("#paypal-container-EHCCMNK4LLQAJ");
+      });
+    </script>
   </body>
 </html>

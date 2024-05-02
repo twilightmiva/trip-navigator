@@ -1,7 +1,10 @@
+import Book from "../components/Book"
+
 function Booknow(){
     return(
-        <div>
-        </div>
+        <>
+            <Book/>
+        </>
     )
 }
 export default Booknow
