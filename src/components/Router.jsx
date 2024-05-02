@@ -8,8 +8,7 @@ import Trip from "../pages/Trip";
 import Logins from "../pages/Logins";
 import Register from "../pages/Register";
 
-import Addtrip from "../pages/Addtrip";
-
+import Addtrip from "../pages/Addtrip"
 import Singletrip from "./SingletripData";
 
 function Router() {
@@ -77,7 +76,6 @@ function Router() {
             </Layout>
           }
         />
-
         <Route
           path="/addtrip"
           element={
@@ -86,8 +84,7 @@ function Router() {
             </Layout>
           }
         />
-        
-
+      
 
         <Route
           path="/trips/:id"

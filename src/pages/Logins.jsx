@@ -14,12 +14,16 @@ function Logins() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
+
+    confirmPassword: "",
+
   });
   const navigate = useNavigate();
 
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
+
 
   async function getUserInfo() {}
 
@@ -65,6 +69,21 @@ function Logins() {
     setShowPassword((prev) => !prev);
   }
 
+
+  createUserWithEmailAndPassword(auth, formData.email, formData.password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+
+      console.log("User login successfully:", user);
+      navigate("/addtrip");
+    })
+    .catch((error) => {
+      setErrorMessage("login failed. Please try again.");
+      console.error("Registration error:", error);
+    });
+
+ 
+
   return (
     <div>
       <div className="">
@@ -103,6 +122,7 @@ function Logins() {
             >
               Log-In
             </button>
+
           </div>
           <h1 className="p-[2em]">
             Don't have an Account?
@@ -110,6 +130,7 @@ function Logins() {
               <span className="underline cursor-pointer">Sign-Up</span>
             </Link>
           </h1>
+          <h1>hello</h1>
         </div>
       </div>
     </div>
